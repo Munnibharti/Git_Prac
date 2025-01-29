@@ -1,5 +1,7 @@
 head
 {
     background-color: aqua;
+    font: optional;
+    font-size: large;
 
 }
