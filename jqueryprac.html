@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+    
+           <!--- <div class="item">Item1</div>
+            <div class="item">Item2</div>
+            <div class="item">Item3 </div>-->
+            <button id="buttonID">Click Me</button>
+          
+           
+           <script>
+
+       
+    $(document).ready(function(){
+      console.log("document is ready")
+      console.log('#buttonID')
+       $('#buttonID').click(function()
+    {
+              alert("button clicked");
+              console.log("button clicked");
+    });
+  });
+            
+            // $('.item').each(function(index)
+           
+            // { 
+                
+            //     console.log('Item ' + (index + 1) + ': ' + $(this).text())
+            // });
+
+      //  });
+    </script>
+    </body>
+</html>

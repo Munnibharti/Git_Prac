@@ -1,0 +1,92 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body
+        {
+            font-family: Arial ,Helvetica,sans-serif;
+            padding: 20px
+
+
+
+        }
+    </style>
+
+</head>
+<body>
+    <h2>jquery DOM Manipulation Example</h2>
+    <!--Text and Html-->
+    <div id="content" class="box">
+        <p>This is some <b> bold </b> text inside a paragraph.</p>
+    </div>
+    <button id="getText">Get Text</button>
+    <button id="setText">Set Text</button>
+    <button id="getHtml">Get Html</button>
+    <button id="setHtml">Set Html</button>
+    <hr>
+
+    <!--Input field-->
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button id="getValue">Get Value</button>
+    <button id="setValue">Set Value</button>
+    <hr>
+    <!--Append , Prepend, Before, AFter-->
+    <div id="container" class="box">
+        <p>Exisitng Contnet</p>
+        <button id="append">Append</button>
+        <button id="prepend">Prepend</button>
+        <button id="before">Before</button>
+        <button id="after">After</button>
+    </div>
+    <script>
+        $(document).ready(function()
+    {
+        //Get and Set Text
+        $("#getText").click(function(){
+            alert("Text: " + $('#content').text());
+
+        });
+
+        $("#setText").click(function(){
+            $("#content").text("<This is a new text without html.");
+        })
+
+        $('#getValue').click(function(){
+         
+            alert("Input Hello: "+$("#nameInput").val());
+
+        });
+
+        $('#setValue').click(function(){
+              $("#nameInput").val("Pushpa");
+        });
+//Append And Prepend
+        $('#append').click(function()
+    {
+        $('#container').append('<p>Append content at the the end.</p>');
+    });
+
+    $('#prepend').click(function(){
+        $('#container').prepend("<p> PRepended content at the beginning")
+    });
+
+ //After and Before
+/*$('#before').click(function(){
+    $('#container').before('<p> enter the content before the container</p>')
+});*/
+$('#before').click(function(){
+    $('h2').slideup()
+});
+// $('#before').click(function(){
+//     $('#container').toggle()
+// });
+
+$('#after').click(function(){
+    $('#container').after('<p> Enter the content afte the container');
+});
+
+    });
+    </script>
+</body>
+</html>

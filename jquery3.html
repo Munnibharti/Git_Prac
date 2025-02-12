@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    #btnid
+    {
+        background-color: aqua;
+        width: auto;
+        height:auto;
+    }
+</style>
+    </head>
+    <body>
+
+       <ul id="unlist">
+        <li>Anar</li>
+        <li>Kela</li>
+        <li>Papita</li>
+        <li>Mausami</li>
+
+       </ul> 
+       <p >Hi this is jquery1 part</p>
+       <button id="btnid">Click me</button>
+       <script>
+        $(document).ready(function()
+    {
+    $('p').hide();
+    $('p').slideToggle(2000);
+    $('p').animate({
+        'margin-left':"200px",
+        opacity:"0px",
+        'margin-top':"25px"
+    },1000)
+       // $('p').slideDown(2000);
+        $("ul li:eq(3)").css("border","2px solid red");
+       // $("#btnid").dblclick(function()
+        $("#btnid").contextmenu(function()
+    {
+        // "border": "4px solid green",
+        //             "width": "80px",
+        //             "height": "50px"
+        $('ul li:eq(2)').css({"border":"4px solid green","width":"auto","height":"auto"});
+        $('ul li:eq(1)').css('background-color','pink');
+        $('ul li:lt(4)').css('width','80px');
+
+    });
+
+        
+    });
+       </script>
+    </body>
+
+</html>
